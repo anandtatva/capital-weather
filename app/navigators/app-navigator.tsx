@@ -8,8 +8,9 @@ import React from "react"
 import { useColorScheme } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen } from "../screens"
+import { WelcomeScreen, CountryDetailScreen } from "../screens"
 import { navigationRef, useBackButtonHandler } from "./navigation-utilities"
+import { WeatherDetailsScreen } from "../screens/weather-details/weather-details-screen"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -25,9 +26,9 @@ import { navigationRef, useBackButtonHandler } from "./navigation-utilities"
  */
 export type NavigatorParamList = {
   welcome: undefined
-  demo: undefined
-  demoList: undefined
   // 🔥 Your screens go here
+  countryDetails: undefined
+  weatherDetails: undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -42,9 +43,10 @@ const AppStack = () => {
       initialRouteName="welcome"
     >
       <Stack.Screen name="welcome" component={WelcomeScreen} />
-      <Stack.Screen name="demo" component={DemoScreen} />
-      <Stack.Screen name="demoList" component={DemoListScreen} />
       {/** 🔥 Your screens go here */}
+      <Stack.Screen name="countryDetails" component={CountryDetailScreen} />
+      <Stack.Screen name="weatherDetails" component={WeatherDetailsScreen} />
+
     </Stack.Navigator>
   )
 }

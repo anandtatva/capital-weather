@@ -1,12 +1,14 @@
 import { Instance, SnapshotOut, types } from "mobx-state-tree"
-import { CharacterStoreModel } from "../character-store/character-store"
+import { CountryStoreModel } from "../country-store/country-store"
+import { WeatherStoreModel } from "../weather-store/weather-store"
 
 /**
  * A RootStore model.
  */
 // prettier-ignore
 export const RootStoreModel = types.model("RootStore").props({
-  characterStore: types.optional(CharacterStoreModel, {} as any),
+  countryStore: types.optional(CountryStoreModel, {} as any),
+  weatherStore: types.optional(WeatherStoreModel, {} as any)
 })
 
 /**

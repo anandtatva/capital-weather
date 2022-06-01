@@ -22,7 +22,7 @@ export function Button(props: ButtonProps) {
   } = props
 
   const viewStyle = viewPresets[preset] || viewPresets.primary
-  const viewStyles = [viewStyle, styleOverride]
+  const viewStyles = [viewStyle, styleOverride,rest.disabled && {opacity: 0.6}]
   const textStyle = textPresets[preset] || textPresets.primary
   const textStyles = [textStyle, textStyleOverride]
 

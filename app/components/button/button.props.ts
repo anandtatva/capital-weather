@@ -3,6 +3,7 @@ import { ButtonPresetNames } from "./button.presets"
 import { TxKeyPath } from "../../i18n"
 
 export interface ButtonProps extends TouchableOpacityProps {
+  disabled?: boolean
   /**
    * Text which is looked up via i18n.
    */

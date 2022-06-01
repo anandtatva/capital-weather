@@ -7,7 +7,16 @@
   "errors": {
     "invalidEmail": "Invalid email address."
   },
+  "WeatherDetailScreen": {
+    "title": "Weather Details"
+  },
+  "CountryDetailScreen": {
+    "title": "Countries List",
+    "capitalWeather":"Capital Weather"
+  },
   "welcomeScreen": {
+    "search": "Search",
+    "title": "Search About Country",
     "poweredBy": "POWERED BY IGNITE",
     "readyForLaunch": "Ready for launch.",
     "continue": "CONTINUE"
